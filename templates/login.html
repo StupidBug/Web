@@ -1,74 +1,65 @@
 <!DOCTYPE html>
-<style type="text/css">
-	*{
-		box-sizing: border-box;
-	}
-	body{
-		color:#666;
-		display: flex;
-		justify-content: center;
-	}
-	.Login{
-		border:1px solid #d3ced2;
-		padding: 20px;
-		border-radius: 5px;
-		text-align: left;
-		width: 100%;
-	}
-	.input-text{
-		padding: 15px;
-		border-radius: 3px;
-		width: 100%;
-		border: 1px solid #bbb;
-		color: #4e4e4e;
-		background-color: #fff;
-		font-size: 16px;
-	}
-	.subiit-button{
-		font-size: 16px;
-	    background-color: #555555;
-	    border-width: 0px!important;
-	    border-color: #555555;
-	    color: #f2f2f2;
-	    border-radius: 5px;
-	    padding: .5em 1em;
-	}
-	.column{
-		width:48%;
-	}
-	.main-content{
-		width: 80%;
-		display: flex;
-		flex-direction: column;
-	}
-	.required{
-		color: red;
-	}
-	.column-container{
-		display: flex;
-		justify-content: space-between;
-		flex-direction: row;
-	}
-	h1{
-		color:black;
-		line-height: 1em;
-		margin: 0;
-		font-size: 40px;
-		font-weight: 500;
-	}
-	h2{
-		font-weight: 400;
-	}
-</style>
+<link href="../static/css/login.css" rel="stylesheet" type="text/css" />
+<script src="../static/js/jquery-3.6.0.js"></script>
+<script src="chrome-extension://mooikfkahbdckldjjndioackbalphokd/assets/prompt.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+      $(".first-nav").mouseover(function(){
+        $(this).children(".dropdown-content").stop().slideDown()    
+      })
+    })
+    $(document).ready(function(){
+      $(".first-nav").mouseout(function(){
+        $(this).children(".dropdown-content").stop().slideUp()    
+      })
+    })
+</script>
 <html>
 <body>
-
-
+<div class="container">
+<li class="first-nav-img">
+    <a class="img" href="#">
+      <img src="../static/img/咖啡豆logo.png" width="25">
+    </a>
+</li>
+<ul class="nav">
+  <li class="first-nav"><a href="">咖友天地</a></li>
+  <li class="first-nav"><a href="">咖友推荐</a>
+    <ul class="dropdown-content">
+      <li><a href="">好店推荐</a></li>
+      <li><a href="">品牌推荐</a></li>
+      <li><a href="">品牌上新</a></li>
+    </ul>
+  </li>
+  <li class="first-nav"><a href="#news">咖啡资讯</a></li>
+  <li class="first-nav"><a href="">咖友文化</a>
+    <ul class="dropdown-content">
+      <li><a href="">咖啡历史</a></li>
+      <li><a href="">饮用方法</a></li>
+      <li><a href="">咖啡与中国</a></li>
+    </ul>
+  </li>
+  <li class="first-nav"><a href="">咖友制作</a>
+    <ul class="dropdown-content">
+      <li><a href="">滴滤咖啡</a></li>
+      <li><a href="">虹吸壶（Syphon）</a></li>
+      <li><a href="">摩卡壶（Moka Pot）</a></li>
+      <li><a href="">比利时皇家咖啡壶</a></li>
+      <li><a href="">法式滤压壶</a></li>
+      <li><a href="">电动式咖啡机</a></li>
+    </ul>
+  </li>
+  <li class="first-nav"><a href="">咖友风味</a>
+    <ul class="dropdown-content">
+      <li><a href="">产地</a></li>
+      <li><a href="">咖啡树</a></li>
+      <li><a hrefss="">分类</a></li>
+    </ul>
+  </li>
+ </ul>
+</div>
 <div class="main-content">
-
-
-		<h1>My account</h1>
-	
+	<h1>My account</h1>
 	<div class="column-container">
 		<div class="column column-1">
 			<h2>Login</h2>
@@ -112,7 +103,6 @@
 	</div>	
 	
 </div>
-
 
 </body>
 </html>
